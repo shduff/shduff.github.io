@@ -29,8 +29,23 @@ div#nav ul a {
 div#nav ul a:hover {
 	color:#aaa;
 }
+div.project-zone {
+	position:fixed;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
 </style>
 
+<div class="project-zone">
+{% for project in site.projects %}
+	<a href="{{project.url}}">
+		<div id="{{project.slug}}" class="project-blob {{project.category}}">
+			{{project.title}}
+		</div>
+	</a>
+{% endfor %}
+</div>
 
 <div id="nav">
 	<ul>

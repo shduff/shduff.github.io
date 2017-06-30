@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h1 class="title">{{ page.title }}</h1>
+<p class="when">{{ page.when }}</p>
+
+{% for feature in page.feature %}
+	{% if feature.img %}
+		<div style="height:35em; width:60em; background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:contain; background-repeat:no-repeat;" class="feature-vid"></div>
+	{% endif %}
+{% endfor %}
+
+<div class="description">
+  {{ content }}
+</div>
+
+<ul>
+{% for link_hash in page.links %}
+	{% for link in link_hash %}
+		<a href="{{link[1]}}"><li>{{link[0]}}</li></a>
+	{% endfor %}
+{% endfor %}
+</ul>
+
+{% for feature in page.feature %}
+	{% if feature.vid %}
+		<div style="height:40em; width:60em;" class="feature-vid">
+			{{feature.vid}}
+		</div>
+	{% endif %}
+{% endfor %}
