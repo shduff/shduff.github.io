@@ -89,7 +89,7 @@ div.project-zone .music {
 {% endfor %}
 </div>
 
-<div id="nav">
+<!-- <div id="nav">
 	<ul>
 		<a href=""><li class="edu">EDU</li></a>
 		<a href=""><li class="music">MUSIC</li></a>
@@ -97,7 +97,7 @@ div.project-zone .music {
 		<a href=""><li>NOTEBOOK</li></a>
 		<a href=""><li>CONTACT</li></a>
 	</ul>
-</div>
+</div> -->
 
 <div id="logotype">
 	<a href="mailto:{{site.email}}"><div id="email" class="social-media"> </div></a>
