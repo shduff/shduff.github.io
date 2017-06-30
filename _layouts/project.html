@@ -7,7 +7,7 @@ layout: default
 
 {% for feature in page.feature %}
 	{% if feature.img %}
-		<div style="height:35em; width:60em; background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:contain; background-repeat:no-repeat;" class="feature-vid"></div>
+		<div style="height:35em; width:60em; background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-vid"></div>
 	{% endif %}
 {% endfor %}
 
