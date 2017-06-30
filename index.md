@@ -6,25 +6,52 @@ layout: default
 a {
 	text-decoration: none;
 }
+div#right-bar {
+	position:absolute;
+	background-color:#F1F1F1;
+	height:100%;
+	width:36%;
+	top:0;
+	right:0;
+	border-right:1px #aaa;
+	box-shadow:0px 0px 5px black inset;
+}
 div#logotype {
-	position:fixed;
-	right:1em;
-	bottom:0;
+	position:absolute;
+	bottom:.2em;
+	right:.2em;
 	font-family:Courier;
 	font-size:2.5em;
-	text-align:right;	
-}
-div#logotype h1 {
-	margin:.2em;
-}
-div.social-media {
-	height:1em;
-	width:1em;
-	display:inline-block;
-	border:solid 1px #aaa;
-	border-radius:.1em;
 	text-align:right;
 }
+div#logotype h1 {
+	margin: 0em;
+}
+div.social-media {
+	background-size:cover;
+	height:2em;
+	width:2em;
+	margin:auto;
+	display:inline-block;
+	border:solid 1px #aaa;
+	border-radius:.3em;
+	text-align:right;
+	box-shadow:0px 0px 5px black inset;
+
+}
+#email {
+	background-image:url(../imgs/sm-email.PNG);
+}
+#twitter {
+	background-image:url(../imgs/sm-twitter.PNG);
+}
+#facebook {
+	background-image:url(../imgs/sm-facebook.PNG);
+}
+#github {
+	background-image:url(../imgs/sm-github.PNG);
+}
+
 div#nav {
 	position:fixed;
 	right:1em;
@@ -99,11 +126,12 @@ div.project-zone .music {
 	</ul>
 </div> -->
 
-<div id="logotype">
-	<a href="mailto:{{site.email}}"><div id="email" class="social-media"> </div></a>
-	<a href="http://twitter.com/{{site.twitter_username}}"><div id="twitter" class="social-media"> </div></a>
-	<a href="http://facebook.com/{{site.facebook_username}}"><div id="facebook" class="social-media"> </div></a>
-	<a href="http://github.com/{{site.github_username}}"><div id="github" class="social-media"> </div></a>
-	<h1>shaunalynn<br>duffy</h1>
-
+<div id="right-bar">
+	<div id="logotype">
+		<a href="mailto:{{site.email}}"><div id="email" class="social-media"> </div></a>
+		<a href="http://twitter.com/{{site.twitter_username}}"><div id="twitter" class="social-media"> </div></a>
+		<a href="http://facebook.com/{{site.facebook_username}}"><div id="facebook" class="social-media"> </div></a>
+		<a href="http://github.com/{{site.github_username}}"><div id="github" class="social-media"> </div></a>
+		<h1>shaunalynn<br>duffy</h1>
+	</div>
 </div>
