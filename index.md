@@ -7,21 +7,21 @@ a {
 	text-decoration: none;
 }
 div#right-bar {
-	position:absolute;
-	background-color:#F1F1F1;
+	position:fixed;
+	/*background-color:#F1F1F1;*/
 	height:100%;
 	width:36%;
 	top:0;
 	right:0;
-	border-right:1px #aaa;
-	box-shadow:0px 0px 5px black inset;
+	/*border-right:1px #aaa;*/
+	/*box-shadow:0px 0px 5px black inset;*/
 }
 div#logotype {
 	position:absolute;
-	bottom:.2em;
-	right:.2em;
+	bottom:1em;
+	right:1em;
 	font-family:Courier;
-	font-size:2.5em;
+	font-size:2em;
 	text-align:right;
 }
 div#logotype h1 {
@@ -29,8 +29,8 @@ div#logotype h1 {
 }
 div.social-media {
 	background-size:cover;
-	height:2em;
-	width:2em;
+	height:2.2em;
+	width:2.2em;
 	margin:auto;
 	display:inline-block;
 	border:solid 1px #aaa;
