@@ -2,31 +2,52 @@
 layout: default
 ---
 
-<h1 class="title">{{ page.title }}</h1>
-<p class="when">{{ page.when }}</p>
+<div class="project-page">
 
-{% for feature in page.feature %}
-	{% if feature.img %}
-		<div style="height:35em; width:60em; background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-vid"></div>
-	{% endif %}
-{% endfor %}
+	<div class="project-title-zone">
+		<h1 class="project-title">{{ page.title }}</h1>
+		<p class="project-when">{{ page.when }}</p>
+	</div>
 
-<div class="description">
-  {{ content }}
-</div>
+	<div class="project-link-zone">
+		{% for link_hash in page.links %}
+			{% for link in link_hash %}
+				{% if link[0] == 'site' %}
+					<a href="{{link[1]}}"><div class="social-media site-icon"></div></a>
+				{% elsif link[0] == 'email' %}
+					<a href="{{link[1]}}"><div class="social-media email-icon"></div></a>
+				{% elsif link[0] == 'facebook' %}
+					<a href="{{link[1]}}"><div class="social-media facebook-icon"></div></a>
+				{% elsif link[0] == 'twitter' %}
+					<a href="{{link[1]}}"><div class="social-media twitter-icon"></div></a>
+				{% elsif link[0] == 'github' %}
+					<a href="{{link[1]}}"><div class="social-media github-icon"></div></a>
+				{% elsif link[0] == 'flickr' %}
+					<a href="{{link[1]}}"><div class="social-media flickr-icon"></div></a>
+				{% elsif link[0] == 'youtube' %}
+					<a href="{{link[1]}}"><div class="social-media youtube-icon"></div></a>
+				{% elsif link[0] == 'vimeo' %}
+					<a href="{{link[1]}}"><div class="social-media vimeo-icon"></div></a>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</div>
 
-<ul>
-{% for link_hash in page.links %}
-	{% for link in link_hash %}
-		<a href="{{link[1]}}"><li>{{link[0]}}</li></a>
+	{% for feature in page.feature %}
+		{% if feature.img %}
+			<div style="background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-img"></div>
+		{% endif %}
 	{% endfor %}
-{% endfor %}
-</ul>
 
-{% for feature in page.feature %}
-	{% if feature.vid %}
-		<div style="height:40em; width:60em;" class="feature-vid">
-			{{feature.vid}}
-		</div>
-	{% endif %}
-{% endfor %}
+	<div class="project-description">
+	  {{ content }}
+	</div>
+
+	{% for feature in page.feature %}
+		{% if feature.vid %}
+			<div class="feature-vid">
+				{{feature.vid}}
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
