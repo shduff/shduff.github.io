@@ -44,9 +44,9 @@ layout: default
 	</div>
 
 	{% for feature in page.feature %}
-		{% if feature.vid %}
-			<div class="feature-vid">
-				{{feature.vid}}
+		{% if feature.embed %}
+			<div class="feature-embed">
+				{{feature.embed}}
 			</div>
 		{% endif %}
 	{% endfor %}
