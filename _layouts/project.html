@@ -35,7 +35,7 @@ layout: default
 
 	{% for feature in page.feature %}
 		{% if feature.img %}
-			<div style="background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-img"></div>
+			<div style="background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-img {{page.slug}}"></div>
 		{% endif %}
 	{% endfor %}
 
