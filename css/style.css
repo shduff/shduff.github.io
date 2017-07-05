@@ -5,6 +5,9 @@ a {
 	text-decoration: none;
 	color:black;
 }
+iframe {
+	border:none;
+}
 
 div.social-media {
 	background-size:cover;
@@ -13,7 +16,7 @@ div.social-media {
 	border:solid 1px #aaa;
 	border-radius:.3em;
 	text-align:right;
-	box-shadow:0px 0px 5px black inset;
+	box-shadow:0px 0px 4px #ccc inset;
 }
 div.email-icon {
 	background-image:url(../imgs/sm-email.PNG);
@@ -43,7 +46,7 @@ div.youtube-icon {
 
 div#right-bar {
 	height:100%;
-	width:33%;
+	width:34%;
 	top:0;
 	right:0;
 	color:#aaa;
@@ -59,20 +62,23 @@ div#right-bar div#bar-top {
 }
 div#right-bar div#bar-bottom {
 	position:absolute;
-	/*width:85%;*/
+	width:91%;
 	bottom:1em;
 	right:1em;
 }
 div#right-bar p#about {
-	font-size:1.2em;
+	font-size:1.3em;
 	text-align:justify;
 	font-family:Courier;
 	margin:0;
 	padding-left:1.5em;
 }
 div#right-bar h1#name {
-	margin: 0em;
-	font-size:3.2em;
+	margin:0em 0em .1em 0em;
+	font-size:3.1em;
+}
+div#right-bar div.social-media-wrapper {
+	margin:3.5em 0em 1.5em 0em;
 }
 div#right-bar div.social-media {
 	height:4em;
@@ -94,7 +100,8 @@ div#right-bar ul#nav a li, div#right-bar h1#name a {
 }
 div#right-bar ul#nav a li {
 	text-decoration:none;
-	padding:.2em 0em;
+	padding:0;
+	margin:0;
 }
 div#right-bar ul#nav a:hover li, div#right-bar h1#name a:hover {
 	color:black;
@@ -103,6 +110,8 @@ div#right-bar ul#nav a:hover li, div#right-bar h1#name a:hover {
 /*********************************************  PORTFOLIO/HOME PAGE  */
 
 div.portfolio-page {
+	position:absolute;
+	left:2.5em;
 	width:64%;
 	height:100%;
 	text-align:left;
@@ -113,6 +122,7 @@ div.portfolio-page .project-blob {
 	border-radius:2em;
 	background-size:cover;
 	display:inline-block;
+	margin-bottom:3.5em;
 }
 div.portfolio-page .project-title {
 	text-align:center;
@@ -125,7 +135,9 @@ div.portfolio-page .project-title {
 /*********************************************  PROJECT PAGE  */
 
 div.project-page {
-	width:64%;
+	position:absolute;
+	left:2.5em;
+	width:58%;
 	margin:1em;
 }
 div.project-page div.social-media {
@@ -201,4 +213,10 @@ div.project-page div.feature-img.fourbytwo {
 }
 div.project-page div.feature-img.mushrooms {
     background-position: 0% 100%;
+}
+
+/*********************************************  NOTEPAD PAGE  */
+div.notepad-page {
+	width:64%;
+	height:1000px;
 }
