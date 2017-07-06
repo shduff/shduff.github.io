@@ -55,11 +55,11 @@ div#right-bar {
 	border-left:solid 1px #666;
 	box-shadow:2px 0px 6px #666 inset;
 }
-div#right-bar div#bar-top {
+/*div#right-bar div#bar-top {
 	position:absolute;
 	top:1em;
 	right:1em;
-}
+}*/
 div#right-bar div#bar-bottom {
 	position:absolute;
 	width:91%;
@@ -92,7 +92,6 @@ div#right-bar a:hover div.social-media {
 
 div#right-bar ul#nav {
 	font-size:2em;
-	/*font-family:Courier;*/
 	list-style-type:none;
 }
 div#right-bar ul#nav a li, div#right-bar h1#name a {
@@ -105,6 +104,43 @@ div#right-bar ul#nav a li {
 }
 div#right-bar ul#nav a:hover li, div#right-bar h1#name a:hover {
 	color:black;
+}
+div#right-bar ul#media-nav, div#right-bar h1#media-name {
+	display:none;
+}
+
+@media (max-width: 600px) {
+	div#right-bar, div#right-bar div#bar-bottom {
+		position:relative;
+		box-shadow:none;
+		text-align:center;
+		border:none;
+		width:100%;
+	}
+	div#right-bar h1#name {
+		display:none;
+	}
+	div#right-bar h1#media-name {
+		display:block;
+		font-size:2.5em;
+		margin:auto;
+
+	}
+	div#right-bar div.social-media-wrapper {
+		margin:1em 0em;
+		text-align:center;
+	} 
+	div#right-bar div.social-media-wrapper .social-media {
+		margin:auto;
+	}
+	div#right-bar ul#nav {
+		display:none;
+	}
+	div#right-bar ul#media-nav {
+		display:block;
+		font-size:2em;
+		list-style-type:none;
+	}
 }
 
 /*********************************************  PORTFOLIO/HOME PAGE  */
@@ -130,6 +166,17 @@ div.portfolio-page .project-title {
 	margin-top:11em;
 	font-size:1.2em;
 	font-weight:bold;
+}
+
+@media (max-width: 600px) {
+	div.portfolio-page {
+		width:100%;
+	}
+	div.portfolio-page a {
+		margin:auto;
+		padding-left:4em;
+	}
+
 }
 
 /*********************************************  PROJECT PAGE  */
@@ -230,3 +277,8 @@ div.notepad-page {
 	width:64%;
 	height:1000px;
 }
+
+
+
+/*********************************************  MOBILE READY  */
+
