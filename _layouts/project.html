@@ -27,7 +27,7 @@ layout: default
 				{% elsif link[0] == 'youtube' %}
 					<a href="{{link[1]}}"><div class="social-media youtube-icon"></div></a>
 				{% elsif link[0] == 'vimeo' %}
-					<a href="{{link[1]}}"><div class="social-media vimeo-icon"></div></a>
+					<a href="social-media/{{link[1]}}"><div class="social-media vimeo-icon"></div></a>
 				{% endif %}
 			{% endfor %}
 		{% endfor %}
@@ -35,7 +35,7 @@ layout: default
 
 	{% for feature in page.feature %}
 		{% if feature.img %}
-			<div style="background-image:url('{{site.baseurl}}imgs/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-img {{page.slug}}"></div>
+			<div style="background-image:url('{{site.baseurl}}imgs/features/{{feature.img}}'); background-size:cover; background-repeat:no-repeat;" class="feature-img {{page.slug}}"></div>
 		{% endif %}
 	{% endfor %}
 
