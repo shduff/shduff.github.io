@@ -83,7 +83,7 @@ div#right-bar div.social-media-wrapper {
 div#right-bar div.social-media {
 	height:4em;
 	width:4em;
-	margin:0em .5em 0em 1.5em;
+	margin:auto;
 	opacity:.8;
 }
 div#right-bar a:hover div.social-media {
@@ -171,6 +171,12 @@ div.portfolio-page .project-title {
 @media (max-width: 600px) {
 	div.portfolio-page {
 		width:100%;
+		left:0;
+		position:relative;
+	}
+	div.portfolio-page .project-blob {
+		margin:auto;
+		display:block;
 	}
 
 }
@@ -269,6 +275,7 @@ div.project-page div.feature-img.mushrooms {
 		width:100%;
 		margin:0;
 		padding:0;
+		left:0;
 	}
 	div.project-page div.project-description {
 		font-size:1.2em;
