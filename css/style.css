@@ -60,7 +60,7 @@ div#right-bar {
 	top:1em;
 	right:1em;
 }*/
-div#right-bar div#bar-bottom {
+div#right-bar div#right-bar-content {
 	position:absolute;
 	width:91%;
 	bottom:1em;
@@ -110,21 +110,25 @@ div#right-bar ul#media-nav, div#right-bar h1#media-name {
 }
 
 @media (max-width: 600px) {
-	div#right-bar, div#right-bar div#bar-bottom {
+	div#right-bar, div#right-bar div#right-bar-content {
 		position:relative;
 		box-shadow:none;
 		text-align:center;
 		border:none;
 		width:100%;
+		left:0;
+
 	}
 	div#right-bar h1#name {
 		display:none;
 	}
 	div#right-bar h1#media-name {
 		display:block;
-		font-size:2em;
+		font-size:2.2em;
 		margin:auto;
-
+	}
+	div#right-bar p#about {
+		padding:0;
 	}
 	div#right-bar div.social-media-wrapper {
 		margin:1em 0em;
@@ -140,6 +144,12 @@ div#right-bar ul#media-nav, div#right-bar h1#media-name {
 		display:block;
 		font-size:2em;
 		list-style-type:none;
+		border-top:solid 1px #666;
+		border-bottom:solid 1px #666;
+		padding:0;
+	}
+	div#right-bar ul#media-nav a, div#right-bar h1#media-name a{
+		color:#666;
 	}
 }
 
@@ -173,6 +183,7 @@ div.portfolio-page .project-title {
 		width:100%;
 		left:0;
 		position:relative;
+		text-align:center;
 	}
 	div.portfolio-page .project-blob {
 		margin:auto;
@@ -269,7 +280,7 @@ div.project-page div.feature-img.mushrooms {
 }
 
 @media (max-width: 600px) {
-	.page-content, .wrapper, div.project-page {
+	div.project-page {
 		position:relative;
 		text-align:center;
 		width:100%;
@@ -285,7 +296,10 @@ div.project-page div.feature-img.mushrooms {
 		text-align:center;
 		width:100%;
 		display:block;
-		margin:1em;
+		margin:1em 0em;
+	}
+	div.project-page div.feature-embed, div.project-page div.feature-img {
+		height:15em;
 	}
 }
 
@@ -299,6 +313,12 @@ div.project-page div.feature-img.mushrooms {
 div.notepad-page {
 	width:64%;
 	height:1000px;
+}
+
+@media (max-width: 600px) {
+	div.notepad-page {
+		width:100%;
+	}
 }
 
 
