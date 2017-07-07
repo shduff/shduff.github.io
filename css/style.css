@@ -318,6 +318,7 @@ div.notepad-page {
 @media (max-width: 600px) {
 	div.notepad-page {
 		width:100%;
+		height:2000px;
 	}
 }
 
