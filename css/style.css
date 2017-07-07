@@ -176,7 +176,7 @@ div.portfolio-page .project-title {
 	}
 	div.portfolio-page .project-blob {
 		margin:auto;
-		display:block;
+		display:inline-block;
 	}
 
 }
