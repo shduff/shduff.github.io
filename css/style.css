@@ -129,6 +129,7 @@ div#right-bar ul#media-nav, div#right-bar h1#media-name {
 	}
 	div#right-bar p#about {
 		padding:0;
+		font-size:1em;
 	}
 	div#right-bar div.social-media-wrapper {
 		margin:1em 0em;
@@ -136,17 +137,23 @@ div#right-bar ul#media-nav, div#right-bar h1#media-name {
 	} 
 	div#right-bar div.social-media-wrapper .social-media {
 		margin:auto;
+		height:2em;
+		width:2em;
 	}
 	div#right-bar ul#nav {
 		display:none;
 	}
 	div#right-bar ul#media-nav {
 		display:block;
-		font-size:2em;
+		font-size:1em;
 		list-style-type:none;
-		border-top:solid 1px #666;
+		/*border-top:solid 1px #666;*/
 		border-bottom:solid 1px #666;
-		padding:0;
+		padding:0 0 .8em 0;
+	}
+	div#right-bar ul#media-nav li {
+		display:inline;
+		margin:1.2em;
 	}
 	div#right-bar ul#media-nav a, div#right-bar h1#media-name a{
 		color:#666;
