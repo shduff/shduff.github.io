@@ -1,0 +1,176 @@
+html { 
+	/* sets background image to be fixed, centered, full-page, and proportional to original image 
+	 detroit image = media/detroit/detroit6.jpg
+	 clifftop image = media/clifftop/clifftop3/4/5.jpg
+	 la image = media/la/la1.jpg*/  
+  	background: url("media/detroit/detroit6.jpg") no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+  	/*This section adds a fading effect when new bg images are introduced.*/
+  	-webkit-transition: background 500ms ease-in 2s; /* property duration timing-function delay */
+    -moz-transition: background 500ms ease-in 2s;
+    -o-transition: background 500ms ease-in 2s;
+    transition: background 500ms ease-in 2s;
+
+
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 500ms;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-transition-delay: 100ms;
+
+    -moz-transition-property: background;
+    -moz-transition-duration: 500ms;
+    -moz-transition-timing-function: ease-in;
+    -moz-transition-delay: 100ms;
+
+    -o-transition-property: background;
+    -o-transition-duration: 500ms;
+    -o-transition-timing-function: ease-in;
+    -o-transition-delay: 100ms;
+
+    transition-property: background;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+    transition-delay: 100ms;
+}
+
+body {
+	padding:0;
+	margin:0;
+	font-family: helvetica, sans-serif;
+	font-size: 18px;
+}
+
+#content {
+	/*Sets and centers backdrop of central pome listing*/
+	width:45%;
+	margin:auto;
+	background-color:rgba(255,255,255,.7);
+	padding:0 40px 60px 40px;
+}
+
+h1 {
+	/*Trip titles*/
+	font-size:44px;
+	font-weight:normal;
+	padding:80px 0 0 0;
+
+}
+
+h2 {
+	/*Poem titles*/
+	font-size:28px;
+	margin:0;
+	padding:45px 0 0 0;
+}
+
+a {
+	text-decoration:none;
+	color:black;
+	font-weight:normal;
+}
+
+ul#nav {
+	/*For horizontal nav*/
+	list-style-type:none;
+
+	/*Just for looks*/
+	width:100%;
+	padding:0;
+	margin:auto;
+	font-size:18px;
+	font-family:helvetica,sans-serif;
+	text-decoration:none;
+	box-shadow: 0 2px 2px #606060;
+}
+
+#nav li {
+	/*For horizontal nav*/
+	float:left; 
+
+	/*Set width of navbar items to be 100% width/# of li's - left-right padding btw li's*/
+	width:calc(100%/5 - 10px);
+	padding:5px;
+	text-align:center;
+
+	background-color:#FFFFFF; /*rgba(255,255,255,.95);*/
+	border-top:solid 1px;
+	border-bottom:solid 1px;
+
+}
+
+#nav a {
+	padding:0;
+	text-decoration:none;
+	color:black;
+}
+
+audio, img {
+	width:100%;
+}
+
+
+/*Pertaining to the splash page, map, and titles*/
+#map-canvas { 
+	height:700px; 
+	width:100%;
+	margin:0; 
+	padding:0;
+
+	/*places title over map canvas*/
+	position:relative;
+}
+
+.site-title {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#FF4500;
+	text-shadow: 2px 2px #000;
+
+	/*places title over map canvas*/
+	position:absolute;
+	z-index:100;
+}
+
+#site-title-pt1 {
+	font-size:80px;
+
+	top:100px;
+	left:180px;
+}
+
+#site-title-pt2 {
+	font-size:80px;
+
+	top:180px;
+	left:290px;
+
+
+}
+
+/*Pertaining to the main content of the site: poems, bylines, labels, etc.*/
+.pome {
+	/* maintains line breaks & white-space */
+	white-space:pre-wrap;  
+}
+
+.byline {
+	font-size:12px;
+	font-weight:normal;
+	font-style:italic;
+	padding:0;
+	margin:0;
+}
+
+.fungi-pome {
+	width:75%;
+	margin:auto;
+	/*float:left;*/
+}
+
+
+

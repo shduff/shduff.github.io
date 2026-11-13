@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <style>
+    </style>
+
+</head>
+
+<body>
+    Setting the BODY's background to the average color in the following image:
+    <br/>
+
+    <canvas id='myCanvas'></canvas>
+    <br/>
+
+    <!-- <img width="600" height="400" id="i" src="media/clifftop/clifftop1.jpg" /> -->
+
+
+
+<script>
+
+    function getAvgColor(pathToImg) {
+        if(typeof(pathToImg)==='undefined') pathToImg = 'media/test-logo.jpg';
+
+        var canvas = document.getElementById('myCanvas'),
+            context = canvas.getContext('2d'),
+            rgb = {
+                r: 102,
+                g: 102,
+                b: 102
+            }, // Set a base colour as a fallback for non-compliant browsers
+            pixelInterval = 5, // Rather than inspect every single pixel in the image inspect every 5th pixel
+            count = 0,
+            i = -4,
+            data, length;
+
+        var img = new Image(); // Create new img element
+        img.src = pathToImg;
+
+        img.addEventListener("load", function () {
+            // var scale = 600/img.naturalWidth;
+            canvas.height = 400; //img.naturalHeight;
+            canvas.width = 600; //img.naturalWidth;
+            context.drawImage(img, 0, 0, 600, 400);
+
+            try {
+                data = context.getImageData(0, 0, canvas.width, canvas.height);
+            } catch (e) {
+                // catch errors - usually due to cross domain security issues
+                alert(e);
+                // return rgb;
+            }
+
+            data = data.data;
+            // console.log(data[100]);
+            length = data.length;
+            while ((i += pixelInterval * 4) < length) {
+                count++;
+                rgb.r += data[i];
+                rgb.g += data[i + 1];
+                rgb.b += data[i + 2];
+            }
+
+            // floor the average values to give correct rgb values (ie: round number values)
+            rgb.r = Math.floor(rgb.r / count);
+            rgb.g = Math.floor(rgb.g / count);
+            rgb.b = Math.floor(rgb.b / count);
+
+            console.log(rgb);
+            document.body.style.backgroundColor = 'rgb(' + rgb.r + ',' + rgb.b + ',' + rgb.g + ')'; 
+
+            var threshold = 255/4;
+            var redTest = {'red':255,'green':0,'blue':0}; 
+            var greenTest = {'red':0,'green':255,'blue':0};   
+            var blueTest = {'red':0,'green':0,'blue':255};
+            var testColors = [redTest, greenTest, blueTest]; 
+
+            // if (distanceBetween(rgb1,testRGB) < threshold) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            
+        }, false);
+                
+    }
+
+
+  
+            
+    </script>
+</body>
+
+</html>
